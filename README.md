@@ -80,24 +80,34 @@ To use the script, you need to provide your own service credentials.
 
 In order to read what you sent to MessageHub, you can also use notebook to create kafka consumer and read from one of your topics.
 
-Example request:
+### Example request:
 
-!curl -X POST -H "Content-Type: application/vnd.kafka.v1+json" \
+curl -X POST -H "Content-Type: application/vnd.kafka.v1+json" \
 -H "X-Auth-Token: gkyIt44JC9S1eGDvPtg1KfpKcbWd2FdtaN8ExRZKYNjQgfr5" \
 --data '{"name": "my_consumer_instance", "format": "binary", "auto.offset.reset": "smallest"}' \
 https://kafka-rest-prod01.messagehub.services.us-south.bluemix.net:443/consumers/my_json_consumer 
-{"instance_id":"my_consumer_instance","base_uri":"https://kafka-rest-prod01.messagehub.services.us-south.bluemix.net:443/consumers/my_json_consumer/instances/my_consumer_instance"}
 
-Example response:
+### Example response:
 
 {"instance_id":"my_consumer_instance","base_uri":"https://kafka-rest-prod01.messagehub.services.us-south.bluemix.net/consumers/my_json_consumer/instances/my_consumer_instance"}
+
 {'base_uri': 'https://kafka-rest-prod01.messagehub.services.us-south.bluemix.net:443/consumers/my_json_consumer/instances/my_consumer_instance',
  'instance_id': 'my_consumer_instance'}
-Reading from kafka topic with created consumer;
-!curl -X GET -H "Accept: application/vnd.kafka.v1+json" \
+ 
+### Reading from kafka topic with created consumer;
+
+curl -X GET -H "Accept: application/vnd.kafka.v1+json" \
 -H "X-Auth-Token: gkyIt44JC9S1eGDvPtg1KfpKcbWd2FdtaN8ExRZKYNjQgfr5" \
 https://kafka-rest-prod01.messagehub.services.us-south.bluemix.net:443/consumers/my_json_consumer/instances/my_consumer_instance/topics/_StreamingInput
 
+### Example response:
+
+{"key":null,"value":"c2FtcGxlIHR3ZWV0Cg==","partition":0,"offset":402}
+
+Depending on the type of the message, you may receive messages in binary format. You can convert binary messages to readable format by using command line
+
+$ echo "c2FtcGxlIHR3ZWV0Cg==" | base64 -D
+$ "sample tweet"
 
 # License
 
