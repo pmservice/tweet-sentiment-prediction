@@ -6,9 +6,9 @@ This guide will help you to explain steps necessary to deploy streaming service 
 
 Streaming service uses Moksha REST API to deploy models and work with streaming data which is provided by BlueMix MessageHub service.
 By using streaming service, you can:
-•	Deploy models which are developed by Data Scientists by providing model info, MessageHub and Apache Spark Service details.
-•	Get status of your existing deployments.
-•	Start/Stop/Delete specific streaming deployment.
+- Deploy models which are developed by Data Scientists by providing model info, MessageHub and Apache Spark Service details.
+- Get status of your existing deployments.
+- Start/Stop/Delete specific streaming deployment.
 
 In order to create MessageHub and Apache Spark services, you should login to [IBM Bluemix][2] and click on Catalog to see available services. See [free trial][3] if you don't yet have an ID.
 
@@ -32,9 +32,10 @@ Apache Spark Service;
 
 
 # Preparing MessageHub 
-Once you have MessageHub service up and running, you need to create topic for you streaming deployment.
-1.	From the Bluemix dashboard, click on MessageHub service you have created.
 
+Once you have MessageHub service up and running, you need to create topic for you streaming deployment.
+
+1.	From the Bluemix dashboard, click on MessageHub service you have created.
 
 ![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/blob/master/images/dashboard.png)  
 
