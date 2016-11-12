@@ -107,6 +107,7 @@ https://kafka-rest-prod01.messagehub.services.us-south.bluemix.net:443/consumers
 Depending on the type of the message, you may receive messages in binary format. You can convert binary messages to readable format by using command line
 
 $ echo "c2FtcGxlIHR3ZWV0Cg==" | base64 -D
+
 $ "sample tweet"
 
 # License
