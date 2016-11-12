@@ -35,17 +35,17 @@ Apache Spark Service;
 
 Once you have MessageHub service up and running, you need to create topic for you streaming deployment.
 
-1.	From the Bluemix dashboard, click on MessageHub service you have created.
+- From the Bluemix dashboard, click on MessageHub service you have created.
 
 ![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/blob/master/images/dashboard.png)  
 
-2.	Create topics by clicking on “+” sign. For streaming deployment, you need one input and one output topic.
+- Create topics by clicking on “+” sign. For streaming deployment, you need one input and one output topic.
 
 ![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/blob/master/images/messagehub.png)  
 
 ![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/blob/master/images/messagehub_topics.png)
 
-3. Once you have your topics ready, you can use kafka rest url and your api key to retrieve the list of topic by using cURL calls from Apache Spark Notebooks. 
+- Once you have your topics ready, you can use kafka rest url and your api key to retrieve the list of topic by using cURL calls from Apache Spark Notebooks. 
 Kafka REST URL and Api Key information are provided in service credentials.
 
 ![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/blob/master/images/messagehub_sc.png)
