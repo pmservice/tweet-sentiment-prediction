@@ -45,9 +45,7 @@ Once you have MessageHub service up and running, you need to create topic for yo
 
 ![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/blob/master/images/messagehub_topics.png)
 
-
-
-	Once you have your topics ready, you can use kafka rest url and your api key to retrieve the list of topic by using cURL calls from Apache Spark Notebooks. 
+3. Once you have your topics ready, you can use kafka rest url and your api key to retrieve the list of topic by using cURL calls from Apache Spark Notebooks. 
 Kafka REST URL and Api Key information are provided in service credentials.
 
 ![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/blob/master/images/messagehub_sc.png)
