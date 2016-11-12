@@ -13,22 +13,22 @@ By using streaming service, you can:
 In order to create MessageHub and Apache Spark services, you should login to [IBM Bluemix][2] and click on Catalog to see available services. See [free trial][3] if you don't yet have an ID.
 
 
-![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/images/catalog.png)
+![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/blob/master/images/catalog.png)
 
 You can search for MessageHub and Apache Spark services and create as per below instructions.
 
 MessageHub Service;
 
-![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/images/ms_catalog.png)
+![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/blob/master/images/ms_catalog.png)
   
-![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/images/ms_service.png)  
+![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/blob/master/images/ms_service.png)  
 
 
 Apache Spark Service;
 
-![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/images/as_catalog.png)
+![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/blob/master/images/as_catalog.png)
   
-![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/images/as_service.png)  
+![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/blob/master/images/as_service.png)  
 
 
 # Preparing MessageHub 
@@ -36,20 +36,20 @@ Once you have MessageHub service up and running, you need to create topic for yo
 1.	From the Bluemix dashboard, click on MessageHub service you have created.
 
 
-![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/images/dashboard.png)  
+![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/blob/master/images/dashboard.png)  
 
 2.	Create topics by clicking on “+” sign. For streaming deployment, you need one input and one output topic.
 
-![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/images/messagehub.png)  
+![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/blob/master/images/messagehub.png)  
 
-![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/images/messagehub_topics.png)
+![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/blob/master/images/messagehub_topics.png)
 
 
 
 	Once you have your topics ready, you can use kafka rest url and your api key to retrieve the list of topic by using cURL calls from Apache Spark Notebooks. 
 Kafka REST URL and Api Key information are provided in service credentials.
 
-![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/images/messagehub_sc.png)
+![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/blob/master/images/messagehub_sc.png)
 
 
 # Apache Spark Service Credentials
@@ -57,18 +57,18 @@ Kafka REST URL and Api Key information are provided in service credentials.
 Once you have your Apache Spark service up and running, you can check your service credentials.
 From Dashboard, click on Spark service you have created
 
-![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/images/dashboard_as.png)
+![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/blob/master/images/dashboard_as.png)
 
 Click on “Service Credentials”
 
-![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/images/apachespark_sc.png)
+![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/blob/master/images/apachespark_sc.png)
 
 # cURL Statements to Interact with MessageHub
 
 In order to retrieve list of topics you have in your Message Hub you can use below cURL call.
 !curl -H "X-Auth-Token: your_api_key" "kafka_rest_url/topics/"
 
-![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/images/curl_topics.png)
+![sample_output](https://github.com/pmservice/tweet-sentiment-prediction/blob/master/images/curl_topics.png)
 
 You can see newly created topics “_StreamingInput” and “_StreamingOutput” among other existing topics.
 
