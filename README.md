@@ -97,9 +97,11 @@ https://kafka-rest-prod01.messagehub.services.us-south.bluemix.net:443/consumers
 
 Depending on the type of the message, you may receive messages in binary format. You can convert binary messages to readable format by using command line
 
-$ echo "c2FtcGxlIHR3ZWV0Cg==" | base64 -D
+#### Decode response:
+echo "c2FtcGxlIHR3ZWV0Cg==" | base64 -D
 
-$ "sample tweet"
+#### Decoded response:
+"sample tweet"
 
 
 ### Reading from output topic with created consumer;
@@ -114,9 +116,10 @@ https://kafka-rest-prod01.messagehub.services.us-south.bluemix.net:443/consumers
 #### Decode response:
 echo "eyJ0d2VldCI6InNhbXBsZSB0d2VldCIsInR3ZWV0X3dvcmRzIjpbInNhbXBsZSIsInR3ZWV0Il0sIndvcmRzIjpbInNhbXBsZSIsInR3ZWV0Il0sImZlYXR1cmVzIjp7InR5cGUiOjAsInNpemUiOjI2MjE0NCwiaW5kaWNlcyI6WzE0OTEwNSwyMjY3MzBdLCJ2YWx1ZXMiOlsxLjAsMS4wXX0sInJhd1ByZWRpY3Rpb24iOnsidHlwZSI6MSwidmFsdWVzIjpbLTIzLjg1ODkxNDgyNTQ2ODUxNywtMjQuMDA3MDM0NTA3NDY1MTFdfSwicHJvYmFiaWxpdHkiOnsidHlwZSI6MSwidmFsdWVzIjpbMC41MzY5NjIzNjczOTI0OTU0LDAuNDYzMDM3NjMyNjA3NTA0Nl19LCJwcmVkaWN0aW9uIjowLjB9" |base64 -D
 
-#### Decoded output:
-{"tweet":"sample tweet","tweet_words":["sample","tweet"],"words":["sample","tweet"],"features":{"type":0,"size":262144,"indices":[149105,226730],"values":[1.0,1.0]},"rawPrediction":{"type":1,"values":[-23.858914825468517,-24.00703450746511]},"probability":{"type":1,"values":[0.5369623673924954,0.4630376326075046]},"prediction":0.0}
+#### Decoded response:
+{"tweet":"sample tweet","tweet_words":["sample","tweet"],"words":["sample","tweet"],"features":{"type":0,"size":262144,"indices":[149105,226730],"values":[1.0,1.0]},"rawPrediction":{"type":1,"values":[-23.858914825468517,-24.00703450746511]},"probability":{"type":1,"values":[0.5369623673924954,0.4630376326075046]},<b>"prediction":0.0</b>}
 
+Note: "prediction":0.0 fields contains predicted sentiment which is POSITIVE. 1.0 represent NEGATIVE sentiment.
 
 # License
 
