@@ -119,7 +119,7 @@ echo "eyJ0d2VldCI6InNhbXBsZSB0d2VldCIsInR3ZWV0X3dvcmRzIjpbInNhbXBsZSIsInR3ZWV0Il
 #### Decoded response:
 {"tweet":"sample tweet","tweet_words":["sample","tweet"],"words":["sample","tweet"],"features":{"type":0,"size":262144,"indices":[149105,226730],"values":[1.0,1.0]},"rawPrediction":{"type":1,"values":[-23.858914825468517,-24.00703450746511]},"probability":{"type":1,"values":[0.5369623673924954,0.4630376326075046]},<b>"prediction":0.0</b>}
 
-Note: "prediction":0.0 fields contains predicted sentiment which is POSITIVE. 1.0 represent NEGATIVE sentiment.
+<b>Note: "prediction" field contains predicted sentiment which is POSITIVE (indicated by 0.0 value). Value of 1.0 represents NEGATIVE sentiment.</b>
 
 # License
 
