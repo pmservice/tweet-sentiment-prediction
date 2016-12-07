@@ -4,7 +4,7 @@
 
 This guide will help you to explain steps necessary to deploy streaming service on [IBM Watson Machine Learning Bluemix][1] offering. 
 
-Streaming service uses Moksha REST API to deploy models and work with streaming data which is provided by BlueMix MessageHub service.
+Streaming service uses Watson Machine Learning REST API to deploy models and work with streaming data which is provided by BlueMix MessageHub service.
 By using streaming service, you can:
 - Deploy models which are developed by Data Scientists by providing model info, MessageHub and Apache Spark Service details.
 - Get status of your existing deployments.
